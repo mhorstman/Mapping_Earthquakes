@@ -1,5 +1,6 @@
 # Ignore the config.js file.
 config.js
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
