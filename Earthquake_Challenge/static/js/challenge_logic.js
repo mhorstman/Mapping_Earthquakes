@@ -39,15 +39,15 @@ let baseMaps = {
 // 1.1. Add a 2nd layer group for the tectonic plate data.
 // 2.1. Add a 3rd layer group for the major earthquake data.
 let allEarthquakes = new L.LayerGroup();
-let techtonicPlates = new L.LayerGroup();
+let tectonicPlates = new L.LayerGroup();
 let majorEarthquakes = new L.LayerGroup();
 
 // 1.2. Add a reference to the tectonic plates group to the overlays object.
 // 2.2. Add a reference to the major earthquake group to the overlays object.
 let overlays = {
   "Earthquakes": allEarthquakes,
-  "Techtonic Plates": techtonicPlates,
-  "Major Earthquakes": majorEarthquakes
+  "Major Earthquakes": majorEarthquakes,
+  "Tectonic Plates": tectonicPlates
 };
 
 // Then we add a control to the map that will allow the user to change which
@@ -219,7 +219,7 @@ legend.onAdd = function() {
       color: "blue",
       weight: 2,
       opacity: 0.7
-    }).addTo(techtonicPlates);
+    }).addTo(tectonicPlates);
   });
-  techtonicPlates.addTo(map);
+  tectonicPlates.addTo(map);
 });
